@@ -4,18 +4,19 @@ extern crate sys_info;
 extern crate users;
 
 fn print_mac_specs() {
-    print_username();
-    println!("Hostname: {}", sys_info::hostname().unwrap());
+    print_user_information();
     println!();
     print_operating_system_information();
     println!();
     print_disk_information();
 }
 
-fn print_username() {
+fn print_user_information() {
     use users::{get_user_by_uid, get_current_uid};
-    let user = get_user_by_uid(get_current_uid()).unwrap();
+    let user = get_user_by_uid (get_current_uid()).unwrap();
     println!("User: {}", user.name());
+
+    println!("Hostname: {}", sys_info::hostname().unwrap());
 }
 
 fn print_operating_system_information() {
