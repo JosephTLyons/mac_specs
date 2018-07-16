@@ -11,6 +11,8 @@ fn print_mac_specs() {
     print_disk_information();
     println!();
     print_memory_information();
+    println!();
+    print_cpu_information();
 }
 
 fn print_user_information() {
@@ -53,8 +55,20 @@ fn bytes_to_gigabytes (bytes: u64) -> u64 {
     return bytes / (1024 * 1024 * 8);
 }
 
+fn print_cpu_information() {
+    let cpu_speed = sys_info::cpu_speed().unwrap();
+    println! ("CPU Speed: {} MHz", cpu_speed);
+
+    let cpu_number = sys_info::cpu_num().unwrap();
+    println! ("Number of CPUs: {}", cpu_number);
+}
+
 fn main() {
     println!();
     print_mac_specs();
     println!();
 }
+
+// TODO:
+// -  Print a heading for each section
+// -  Convert values to gigs
