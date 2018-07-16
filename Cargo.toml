@@ -5,5 +5,6 @@ authors = ["Joseph Lyons <JosephTLyons@users.noreply.github.com>"]
 
 [dependencies]
 os_info = "1.0.1"
+os_type = "2.0.0"
 sys-info = "0.5.6"
 users = "0.7.0"
