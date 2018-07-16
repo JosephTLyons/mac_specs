@@ -65,7 +65,3 @@ fn main() {
     print_mac_specs();
     println!();
 }
-
-// TODO:
-// -  Print a heading for each section
-// -  Convert values to gigs
