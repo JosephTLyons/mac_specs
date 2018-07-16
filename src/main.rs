@@ -24,7 +24,7 @@ fn print_disk_information() {
     // println!("Disk Space Total: {}", bytes_to_gigabytes (total_space));
 
     let space_used = (total_space - free_space) as f64 / total_space as f64;
-    println!("Disk Space Used: {}%", space_used * 100 as f64);
+    println!("Disk Space Used: {:.2}%", space_used * 100 as f64);
 }
 
 fn bytes_to_gigabytes (bytes: u64) -> u64 {
