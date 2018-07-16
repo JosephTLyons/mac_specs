@@ -26,13 +26,13 @@ fn print_operating_system_information() {
 }
 
 fn print_disk_information() {
-    let free_space = sys_info::disk_info().unwrap().free;
-    let total_space = sys_info::disk_info().unwrap().total;
+    let free_disk_space = sys_info::disk_info().unwrap().free;
+    let total_disk_space = sys_info::disk_info().unwrap().total;
 
-    //println!("Disk Space Free: {}", bytes_to_gigabytes (free_space));
-    //println!("Disk Space Total: {}", bytes_to_gigabytes (total_space));
+    //println!("Disk Space Free: {}", bytes_to_gigabytes (free_disk_space));
+    //println!("Disk Space Total: {}", bytes_to_gigabytes (total_disk_space));
 
-    let space_used = (total_space - free_space) as f64 / total_space as f64;
+    let space_used = (total_disk_space - free_disk_space) as f64 / total_disk_space as f64;
     println!("Disk Space Used: {:.2}%", space_used * 100 as f64);
 }
 
