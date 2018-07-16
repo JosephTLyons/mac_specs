@@ -1,0 +1,9 @@
+[package]
+name = "mac_specs"
+version = "0.1.0"
+authors = ["Joseph Lyons <JosephTLyons@users.noreply.github.com>"]
+
+[dependencies]
+os_info = "1.0.1"
+sys-info = "0.5.6"
+users = "0.7.0"
