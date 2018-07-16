@@ -56,11 +56,8 @@ fn bytes_to_gigabytes (bytes: u64) -> u64 {
 }
 
 fn print_cpu_information() {
-    let cpu_speed = sys_info::cpu_speed().unwrap();
-    println! ("CPU Speed: {} MHz", cpu_speed);
-
-    let cpu_number = sys_info::cpu_num().unwrap();
-    println! ("Number of CPUs: {}", cpu_number);
+    println! ("CPU Speed: {} MHz", sys_info::cpu_speed().unwrap());
+    println! ("Number of CPUs: {}", sys_info::cpu_num().unwrap());
 }
 
 fn main() {
