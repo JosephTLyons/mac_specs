@@ -34,8 +34,9 @@ fn print_disk_information() {
     //println!("Disk Space Free: {}", bytes_to_gigabytes (free_disk_space));
     //println!("Disk Space Total: {}", bytes_to_gigabytes (total_disk_space));
 
-    let space_used = (total_disk_space - free_disk_space) as f64 / total_disk_space as f64;
-    println!("Disk Space Used: {:.2}%", space_used * 100 as f64);
+    let disk_space_used = (total_disk_space - free_disk_space) as f64 / total_disk_space as f64;
+    println!("Disk Space Used: {:.2}%", disk_space_used * 100 as f64);
+}
 
 fn print_memory_information() {
     let free_memory_space = sys_info::mem_info().unwrap().free;
