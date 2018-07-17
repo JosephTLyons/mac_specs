@@ -1,4 +1,3 @@
-extern crate os_info;
 extern crate os_type;
 extern crate sys_info;
 extern crate users;
