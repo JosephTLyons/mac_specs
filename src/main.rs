@@ -11,17 +11,17 @@ fn print_mac_specs() {
     println! ("--");
     print_operating_system_information();
     println!();
-    println! ("DISK");
-    println! ("----");
-    print_disk_information();
+    println! ("CPU");
+    println! ("---");
+    print_cpu_information();
     println!();
     println! ("MEMORY");
     println! ("------");
     print_memory_information();
     println!();
-    println! ("CPU");
-    println! ("---");
-    print_cpu_information();
+    println! ("DISK");
+    println! ("----");
+    print_disk_information();
 }
 
 fn print_user_information() {
