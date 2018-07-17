@@ -39,7 +39,7 @@ fn print_operating_system_information() {
 }
 
 fn print_cpu_information() {
-    println! ("CPU Speed: {} MHz", sys_info::cpu_speed().unwrap());
+    println! ("CPU Speed: {} GHz", sys_info::cpu_speed().unwrap() as f64 / 1000 as f64);
     println! ("Number of CPUs: {}", sys_info::cpu_num().unwrap());
 }
 
