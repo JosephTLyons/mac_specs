@@ -4,14 +4,24 @@ extern crate sys_info;
 extern crate users;
 
 fn print_mac_specs() {
+    println! ("USER");
+    println! ("----");
     print_user_information();
     println!();
+    println! ("OS");
+    println! ("--");
     print_operating_system_information();
     println!();
+    println! ("DISK");
+    println! ("----");
     print_disk_information();
     println!();
+    println! ("MEMORY");
+    println! ("------");
     print_memory_information();
     println!();
+    println! ("CPU");
+    println! ("---");
     print_cpu_information();
 }
 
