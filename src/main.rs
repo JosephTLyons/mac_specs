@@ -45,10 +45,10 @@ fn print_cpu_information() {
 
 fn print_memory_information() {
     let free_memory_space = sys_info::mem_info().unwrap().free;
-    println! ("Memory Free: {}", free_memory_space);
+    println! ("Memory Free: {:.2} GBs", free_memory_space as f64 / (1024 * 1024) as f64);
 
     let total_memory_space = sys_info::mem_info().unwrap().total;
-    println! ("Memory Total: {}", total_memory_space);
+    println! ("Memory Total: {:.2} GBs", total_memory_space as f64 / (1024 * 1024) as f64);
 
     let space_used = (total_memory_space - free_memory_space) as f64 / total_memory_space as f64;
     println! ("Memory Used: {:.2}%", space_used * 100 as f64);
@@ -63,10 +63,6 @@ fn print_disk_information() {
 
     let disk_space_used = (total_disk_space - free_disk_space) as f64 / total_disk_space as f64;
     println! ("Disk Space Used: {:.2}%", disk_space_used * 100 as f64);
-}
-
-fn bytes_to_gigabytes (bytes: u64) -> u64 {
-    return bytes / (1024 * 1024 * 8);
 }
 
 fn main() {
