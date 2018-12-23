@@ -1,7 +1,3 @@
-extern crate os_type;
-extern crate sys_info;
-extern crate users;
-
 fn print_mac_specs() {
     println! ("USER");
     println! ("----");
