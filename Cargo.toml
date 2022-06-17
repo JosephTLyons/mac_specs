@@ -2,7 +2,7 @@
 name = "mac_specs"
 version = "0.1.0"
 authors = ["Joseph Lyons <JosephTLyons@users.noreply.github.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 os_type = "2.0.0"
